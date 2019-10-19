@@ -9,29 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class LoginServlet
- */
 @WebServlet("/loginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public LoginServlet() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// Read form data
+		// Read formData
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
@@ -44,8 +33,7 @@ public class LoginServlet extends HttpServlet {
 		htmlResponse += "<h2> Your username is " + username + "<br/>";
 		htmlResponse += "<h2> Your userpassword is " + password + "</br>";
 		htmlResponse += "</html>";
-		
-		
+
 		out.println(htmlResponse);
 
 	}
